@@ -9,11 +9,12 @@ This is the backend of the Real-Time Chat App, built using .NET 8. It provides R
 
 ## Setup Instructions
 1. Navigate to the `backend/` directory:
-   ```open bash
-   cd backend
+   ```bash
    cd backend/ChatAppAPI
-2. Install dependencies:
+3. Install dependencies:
+    ```bash
    dotnet restore
-3. Update the appsettings.json file with your database connection string.
-4. Run the backend:
-   dotnet run
+5. Update the appsettings.json file with your database connection string.
+6. Run the backend:
+    ```bash
+    dotnet run
