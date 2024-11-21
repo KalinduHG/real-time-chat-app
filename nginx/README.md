@@ -23,5 +23,5 @@ NGINX is used as a reverse proxy to route requests between the frontend and back
     Open a browser and navigate to 
     ```arduino
     http://localhost
-    
+    ```
     Ensure the frontend loads, and API calls
