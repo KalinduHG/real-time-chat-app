@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion"; // Ensure you import motion from framer-motion
+import { motion } from "framer-motion";
 import "../styles/login.css";
 import { Spinner, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,7 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const LoginPage = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();

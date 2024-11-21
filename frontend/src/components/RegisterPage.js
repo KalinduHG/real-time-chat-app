@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion"; // Ensure you import motion from framer-motion
+import { motion } from "framer-motion";
 import "../styles/register.css";
 import { Spinner, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,7 +24,6 @@ const RegisterPage = () => {
       });
       navigate("/");
     } catch (error) {
-      console.log(error.response);
       if (error.response.status === 400) {
         setErrorMessage(error.response.data);
       } else {
@@ -78,6 +77,13 @@ const RegisterPage = () => {
           </button>
           {errorMessage && <div className="error-message">{errorMessage}</div>}
         </Form>
+
+        <p className="login-prompt">
+          Already have an account?{" "}
+          <a href="/" className="login-link">
+            Log in
+          </a>
+        </p>
       </motion.div>
     </div>
   );

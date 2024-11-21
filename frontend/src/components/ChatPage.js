@@ -17,7 +17,6 @@ import {
   Badge,
   Stack,
   Form,
-  Spinner,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 const ChatApp = () => {
@@ -263,10 +262,10 @@ const ChatApp = () => {
   };
 
   const handleSendMessage = (e) => {
-    e.preventDefault(); // Prevents the default form submission
+    e.preventDefault();
     if (message.trim()) {
-      sendMessage(message); // Call the sendMessage function with the message
-      setMessage(""); // Clear the input field after sending
+      sendMessage(message);
+      setMessage("");
     }
   };
 
@@ -368,9 +367,6 @@ const ChatApp = () => {
   // if (error) {
   //   return <div>Error: {error}</div>;
   // }
-  // if (incomingRequest && !isModalVisible) {
-  //   setModalVisible(true);
-  // }
 
   return (
     <Container fluid>
@@ -428,11 +424,10 @@ const ChatApp = () => {
                   {messages && messages.length > 0 ? (
                     <>
                       {messages.map((msg, index) => {
-                        console.log(msg);
                         const isSender = msg.senderId === userDetails.id;
                         const sentTime = new Date(msg.sentAt).toLocaleDateString('en-US', {
-                          month: 'short', // Short month name (e.g., "Nov")
-                          day: 'numeric', // Day of the month (e.g., "23")
+                          month: 'short',
+                          day: 'numeric',
                         }) + ' ' + new Date(msg.sentAt).toLocaleTimeString([], {
                           hour: '2-digit',
                           minute: '2-digit',
@@ -486,7 +481,6 @@ const ChatApp = () => {
                   >
                     <BsFillSendFill />
                   </Button>
-                  {/* <div className="vr" /> */}
                 </Stack>
               </>
             ) : (
